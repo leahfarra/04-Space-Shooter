@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Enemy Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Assets/spaceMissiles_030.png" type="Texture" id=2]
+
+[node name="Enemy Bullet" type="RigidBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 3.14159
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -3.14159
+polygon = PoolVector2Array( 8.5, -15.8, 8.5, 19, -8.5, 19, -8.5, -11, -5.5, -18.4, -5.5, -19, 5.5, -19 )
